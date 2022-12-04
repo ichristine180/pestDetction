@@ -1,0 +1,44 @@
+{% extends 'layout.html' %} {% block body %}
+<div class="form-section">
+  <div class="form-content">
+    <div class="row">
+      <div class="col-7">
+        <div class="result-img-div">
+          <img
+            src="{{url_for('static',filename=user_image )}}"
+            alt="placeholder"
+          />
+          <div class="text-center">
+            <a class="btn btn-success mt-5 px-4" href="/predict"
+              ><i class="fas fa-arrow-alt-circle-left me-2"></i> Go Back</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col-5">
+        <div class="text-content">
+          <h1>Prediction Results</h1>
+          <p>
+            After scanning and analyzing the uploaded Image, here are the
+            results.
+          </p>
+          <div class="results-content">
+            <p>
+              <span class="results-icon"><i class="fas fa-leaf"></i></span>
+              <span class="results-title ms-2">Results:</span>
+              <span class="results-text d-block"
+                >{% if res.id == 7:%} pest not detected {% else: %} Pest
+                detected
+              </span>
+              <span class="results-text d-block">
+                Pest is likely to be in: <b>{{res.name}}</b> categories
+              </span>
+              {%endif%}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

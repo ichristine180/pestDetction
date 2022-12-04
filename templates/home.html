@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="hero">
+  <div class="hero-content">
+    <div class="row">
+        <div class="col-5">
+            <div class="text-content">
+                <h1>
+                   Pest Detection System
+                </h1>
+                <p>Pest - Detector is a system that uses AI to detect if uploaded images has pest or not,if it does have it sytem will tell you  it's category. </p>
+                <a class="btn btn-success mt-4 px-4" href="/predict">Get Started <i class="fas fa-arrow-alt-circle-right ms-2"></i></a>
+            </div>
+        </div>
+        <div class="col-7">
+            <div class="hero-img"></div>
+        </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
